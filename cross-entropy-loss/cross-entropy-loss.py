@@ -7,9 +7,9 @@ def cross_entropy_loss(y_true: list[int], y_pred: list[list[float]]) -> float:
 
     n = yt.shape[0]
 
-    true_class_probs = yp[np.arange(n), yt]
+    tcp = yp[np.arange(n), yt]
 
-    loss = -np.mean(np.log(true_class_probs))
+    loss = - np.mean(np.log(tcp))
 
     return loss
     
