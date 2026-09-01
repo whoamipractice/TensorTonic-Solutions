@@ -13,7 +13,7 @@ def info_nce_loss(Z1: list, Z2: list, temperature: float = 0.1) -> float:
 
     positive = np.diag(exps)
 
-    denom = np.sum(exps, axis = 1)
+    denom = np.sum(exps, axis = -1)
 
     loss = -np.log(positive/denom)
 
