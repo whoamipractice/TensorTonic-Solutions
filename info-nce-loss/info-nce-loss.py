@@ -7,7 +7,7 @@ def info_nce_loss(Z1: list, Z2: list, temperature: float = 0.1) -> float:
 
     s = (z1@z2.T)/temperature
 
-    s -= np.max(s, axis = 1, keepdims = True)
+    s -= np.max(s, axis = -1, keepdims = True)
 
     exps = np.exp(s)
 
