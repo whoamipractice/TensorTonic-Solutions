@@ -1,4 +1,3 @@
-import math
 import numpy as np
 def binary_focal_loss(predictions: list, targets: list, alpha: float, gamma: float) -> float:
     """Returns the mean binary focal loss as a float."""
